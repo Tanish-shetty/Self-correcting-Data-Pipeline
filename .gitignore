@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+.pytest_cache/
+*.egg-info/
+.env
+.streamlit/secrets.toml
+artifacts/
+
+data/
+
+# Local sample datasets and generated reports
+/samples/
+/output/

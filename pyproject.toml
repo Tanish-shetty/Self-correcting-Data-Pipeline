@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "self-correcting-data-pipeline"
+version = "1.0.0"
+description = "Deterministic, auditable sales CSV ingestion"
+requires-python = ">=3.11"
+dependencies = [
+  "pandas>=2.2,<3", "pandera[pandas]>=0.24,<0.28",
+  "SQLAlchemy>=2.0.36,<2.1",
+  "streamlit>=1.41,<2", "python-dotenv>=1,<2"
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8,<10"]
+
+[project.scripts]
+pipeline = "pipeline.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["pipeline*"]
+
+[tool.setuptools.package-data]
+pipeline = ["profiles.json"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = ["integration: local SQLite persistence and UI integration"]

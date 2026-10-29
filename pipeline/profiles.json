@@ -1,0 +1,19 @@
+{
+  "us_sales": {
+    "version": "1.0.0", "date_formats": ["%Y-%m-%d", "%m/%d/%Y"],
+    "decimal_separator": ".", "thousands_separator": ",",
+    "authoritative_totals": true,
+    "column_aliases": {"cust_id": "customer_id", "txn_id": "transaction_id"}
+  },
+  "eu_sales": {
+    "version": "1.0.0", "date_formats": ["%Y-%m-%d", "%d/%m/%Y"],
+    "decimal_separator": ",", "thousands_separator": ".",
+    "authoritative_totals": false,
+    "column_aliases": {"cust_id": "customer_id", "txn_id": "transaction_id"}
+  },
+  "iso_strict": {
+    "version": "1.0.0", "date_formats": ["%Y-%m-%d"],
+    "decimal_separator": ".", "thousands_separator": null,
+    "authoritative_totals": false, "column_aliases": {}
+  }
+}
